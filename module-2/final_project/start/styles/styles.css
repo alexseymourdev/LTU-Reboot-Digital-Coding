@@ -20,3 +20,25 @@ section.userInterface{
     justify-content: center;
     padding:20px;
 }
+
+main{
+    width:calc(75% - 40px);
+    float:left;
+    padding:20px;
+    background:red;
+}
+
+aside{
+    width:calc(25% - 40px);
+    float:right;
+    padding:20px;
+    background:blue;
+}
+
+@media only screen and (max-width: 900px) {
+    main,
+    aside {
+      float:none;
+      width:calc(100% - 40px);
+    }
+}
