@@ -25,14 +25,12 @@ main{
     width:calc(75% - 40px);
     float:left;
     padding:20px;
-    background:red;
 }
 
 aside{
     width:calc(25% - 40px);
     float:right;
     padding:20px;
-    background:blue;
 }
 
 @media only screen and (max-width: 900px) {
@@ -41,4 +39,19 @@ aside{
       float:none;
       width:calc(100% - 40px);
     }
+}
+
+.imageContainer{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.imageContainer div{
+    max-width:calc(25% - 20px);
+    padding:10px;
+}
+
+.imageContainer div img{
+    max-width:100%;
 }
