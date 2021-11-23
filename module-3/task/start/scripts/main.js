@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 // console.log('Hello');
 
 //Single line comment
@@ -265,15 +263,22 @@ function getAverage(arrNumberData){
 
 let arrData = [3,7,'df','3',7,8,'df',23,6,2,67,'g','34',12,34,5];
 
-let averageNumber = getAverage(arrData);
+// let averageNumber = getAverage(arrData);
+// console.log(averageNumber);
 
-console.log(averageNumber);
+// let elementToUpdate = document.querySelector('.outputNumberHere');
+// console.log(elementToUpdate);
+// elementToUpdate.innerHTML = averageNumber;
 
-let elementToUpdate = document.querySelector('.outputNumberHere');
-console.log(elementToUpdate);
-elementToUpdate.innerHTML = averageNumber;
-
-
+let button = document.querySelector('.runFunction');
+// console.log(button);
+button.addEventListener('click',function(event){
+    // console.log(event);
+    let averageNumber = getAverage(arrData);
+    let elementToUpdate = document.querySelector('.outputNumberHere');
+    // console.log(elementToUpdate);
+    elementToUpdate.innerHTML = averageNumber;
+})
 // The answer should be 16.2307692
 
 /* 
@@ -294,6 +299,3 @@ coding standards andmaintainability.Fork this repo to your own GitHub account
 and submit a **pull request** with your sollution.
 
 */
-
-
->>>>>>> Stashed changes
