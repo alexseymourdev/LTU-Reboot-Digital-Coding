@@ -136,8 +136,8 @@ function calculator(num1,num2,operator){
     return sum;
 }
 
-function isNaNValidator(number){
-    return isNaN(number);
+function isNaNValidator(data){
+    return isNaN(data);
 }
 
 let sum1 = calculator(10,2,'+');
