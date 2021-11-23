@@ -1,4 +1,4 @@
-console.log('Hello');
+// console.log('Hello');
 
 //Single line comment
 
@@ -23,7 +23,7 @@ let discountAmount = 2;
 function showProductName(){
     console.log(productName);
 }
-showProductName();
+// showProductName();
 
 function totalPrice(productPrice=0,productQuantity=0){
     productPrice = parseFloat(productPrice);
@@ -32,7 +32,7 @@ function totalPrice(productPrice=0,productQuantity=0){
     console.log(totalProductPrice);
 }
 
-totalPrice(price,quantity);
+// totalPrice(price,quantity);
 
 //showing the difference between a regular function and an arrow function
 function squareNumber(number=0){
@@ -43,10 +43,10 @@ function squareNumber(number=0){
 var square = (number=0) => number * number;
 
 let squaredNumber = squareNumber(3);
-console.log(squaredNumber);
+// console.log(squaredNumber);
 
 let squared = square(3);
-console.log(squared);
+// console.log(squared);
 //showing the difference between a regular function and an arrow function
 
 function productDiscount(){
@@ -61,7 +61,7 @@ function productDiscount(){
     console.log(sum);
 }
 
-productDiscount();
+// productDiscount();
 
 function calculateDiscount(){
     let sum = price * quantity;
@@ -99,12 +99,12 @@ function drinkOrder(size, drink){
     console.log(message);
 }
 
-drinkOrder('grande');
-drinkOrder('small','cola');
-drinkOrder('medium','orange');
-drinkOrder('large','lemon');
-drinkOrder('small','coffee');
-drinkOrder('small');
+// drinkOrder('grande');
+// drinkOrder('small','cola');
+// drinkOrder('medium','orange');
+// drinkOrder('large','lemon');
+// drinkOrder('small','coffee');
+// drinkOrder('small');
 
 function calculator(num1,num2,operator){
     if(isNaNValidator(num1)){
@@ -148,11 +148,74 @@ let sum5 = calculator(10,2,'%');
 let sum6 = calculator(1,'alex');
 let sum7 = calculator('alex');
 let sum8 = calculator(1,1,'alex');
-console.log(sum1);
-console.log(sum2);
-console.log(sum3);
-console.log(sum4);
-console.log(sum5);
-console.log(sum6);
-console.log(sum7);
-console.log(sum8);
+// console.log(sum1);
+// console.log(sum2);
+// console.log(sum3);
+// console.log(sum4);
+// console.log(sum5);
+// console.log(sum6);
+// console.log(sum7);
+// console.log(sum8);
+
+let arrRainbow = ['red','yellow','pink','green','purple','orange','blue'];
+
+// console.log(arrRainbow);
+// console.log(arrRainbow.length);
+
+
+// console.log(arrRainbow[3]);
+// arrRainbow[3] = 'black';
+// console.log(arrRainbow[3]);
+
+let arrProductData = [
+    productName,
+    price,
+    quantity,
+    inStock,
+    discountAmount,
+];
+
+console.log(arrProductData);
+
+console.log(arrProductData[0]);
+
+// let lastArrayKey = arrProductData.length - 1;
+
+console.log(arrProductData[4]);
+
+let objProductData = {
+    'productName':productName,
+    'price':price,
+    'quantity':quantity,
+    'inStock':inStock,
+    'discountAmount':discountAmount,
+};
+
+console.log(objProductData);
+
+objProductData['productName'] = 'light bulbs';
+
+console.log(objProductData.productName);
+
+objProductData.alexExample1 = 'this is new data';
+
+objProductData['alexExample2'] = 2;
+
+console.log(objProductData);
+
+function outputTimesTables(number){
+    for(
+        counter=1;      //set counter as a variable
+        counter<=12;    //continue to run loop whilst this is true
+        counter++       //add 1 to counter after each iteration
+    ){
+        let sum = counter * number;
+        let strMessage = counter + ' * ' + number + ' = ' + sum;
+        console.log(strMessage);
+    }
+}
+
+for(multiplyer=1;multiplyer<=12;multiplyer++){
+    outputTimesTables(multiplyer);
+}
+
