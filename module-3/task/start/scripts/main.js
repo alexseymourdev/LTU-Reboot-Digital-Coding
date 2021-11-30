@@ -301,3 +301,4 @@ shoppingCartPrice = totalPriceOfShopping(shoppingCart,objCoupon3);
 console.log(shoppingCartPrice);
 shoppingCartPrice = totalPriceOfShopping(shoppingCart,objCoupon4);
 console.log(shoppingCartPrice);
+
