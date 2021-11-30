@@ -175,13 +175,13 @@ let arrProductData = [
     discountAmount,
 ];
 
-console.log(arrProductData);
+// console.log(arrProductData);
 
-console.log(arrProductData[0]);
+// console.log(arrProductData[0]);
 
 // let lastArrayKey = arrProductData.length - 1;
 
-console.log(arrProductData[4]);
+// console.log(arrProductData[4]);
 
 let objProductData = {
     'productName':productName,
@@ -191,17 +191,17 @@ let objProductData = {
     'discountAmount':discountAmount,
 };
 
-console.log(objProductData);
+// console.log(objProductData);
 
 objProductData['productName'] = 'light bulbs';
 
-console.log(objProductData.productName);
+// console.log(objProductData.productName);
 
 objProductData.alexExample1 = 'this is new data';
 
 objProductData['alexExample2'] = 2;
 
-console.log(objProductData);
+// console.log(objProductData);
 
 function outputTimesTables(number){
     for(
@@ -211,7 +211,7 @@ function outputTimesTables(number){
     ){
         let sum = counter * number;
         let strMessage = counter + ' * ' + number + ' = ' + sum;
-        console.log(strMessage);
+        // console.log(strMessage);
     }
 }
 
@@ -219,3 +219,85 @@ for(multiplyer=1;multiplyer<=12;multiplyer++){
     outputTimesTables(multiplyer);
 }
 
+// console.log(shoppingCart);
+
+function totalPriceOfShopping(shoppingCart,objCoupon=null){
+    //LOOP through each item of the array
+    let totalPrice = 0;
+    for(arrayKey=0; arrayKey < shoppingCart.length; arrayKey++){
+        let currentItem = shoppingCart[arrayKey];
+        // console.log(currentItem);
+        // Get the price of the current item and times it by the quantity
+        let currentItemPrice = currentItem.quantity * currentItem.price;
+        //if there is a coupon apply a discount to the current item
+        let discount = 0;
+        //If objCoupon has been passed as an argument and the type is not one that affects the total price
+        if(objCoupon && objCoupon.type != 'basketTotal' && objCoupon.type != 'basketPercent'){
+            currentItemPrice = applyDiscount(objCoupon.type,objCoupon.amount,currentItemPrice);
+        }
+        // console.log(currentItemPrice)
+        // Add the sum to the totalPrice
+        totalPrice += currentItemPrice;
+    }
+    //if the coupon type is to affect the whole basket
+    if(objCoupon && (objCoupon.type == 'basketTotal' || objCoupon.type == 'basketPercent')){
+        totalPrice = applyDiscount(objCoupon.type,objCoupon.amount,totalPrice);
+    }
+    //Return total price
+    return totalPrice.toFixed(2);
+}
+
+function applyDiscount(type,amount,value){
+    switch(type){
+        case 'basketTotal':
+        case 'flatFee':
+            //take the amount off the total price
+            value = value - amount;
+            break;
+        case 'basketPercent':
+        case 'percentage':
+            //work out the total percentage to be removed
+            let discount = (value / 100) * amount;
+            value = value - discount;
+            break;
+    }
+    return value;
+}
+
+//categories = array filled with values of potential shopping basket types
+//type = flatFee, percent, basketTotal, basketPercent
+//amount = the amount to be subtracted
+let objCoupon1 = {
+    types:['toiletries','condiment'],
+    type:'flatFee',
+    amount:0.5,
+};
+
+let objCoupon2 = {
+    types:['canned','snacks'],
+    type:'percentage',
+    amount:30,
+};
+
+let objCoupon3 = {
+    types:[''],
+    type:'basketTotal',
+    amount:25,
+};
+
+let objCoupon4 = {
+    types:[''],
+    type:'basketPercent',
+    amount:40,
+};
+
+let shoppingCartPrice = totalPriceOfShopping(shoppingCart);
+console.log(shoppingCartPrice);
+shoppingCartPrice = totalPriceOfShopping(shoppingCart,objCoupon1);
+console.log(shoppingCartPrice);
+shoppingCartPrice = totalPriceOfShopping(shoppingCart,objCoupon2);
+console.log(shoppingCartPrice);
+shoppingCartPrice = totalPriceOfShopping(shoppingCart,objCoupon3);
+console.log(shoppingCartPrice);
+shoppingCartPrice = totalPriceOfShopping(shoppingCart,objCoupon4);
+console.log(shoppingCartPrice);
