@@ -13,14 +13,15 @@
   </header>
   <section class="userInterface">
     <div class="buttonContainer">
-      <button class="animalFilter" animal="all">All</button>
+      <button class="animalFilter clicked" animal="all">All</button>
       <button class="animalFilter" animal="cat">Cat</button>
-      <button class="animalFilter" animal="capibara">Capibara</button>
+      <button class="animalFilter" animal="capybara">Capybara</button>
       <button class="animalFilter" animal="panda">Panda</button>
       <button class="animalFilter" animal="elephant">Elephant</button>
     </div>
     <div class="inputContainer">
-      <input />
+      <label for="textSearchInput">Search Images: </label>
+      <input class="textSearchInput" id="textSearchInput" name="textSearchInput"/>
     </div>
   </section>
   <main>
@@ -28,51 +29,67 @@
     <section class="imageContainer">
       <div>
         <img class="imageFilter elephant" src="https://images.pexels.com/photos/257578/pexels-photo-257578.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+        <caption>Three Elephants in a desert</caption>
       </div>
       <div>
         <img class="imageFilter cat" src="https://images.pexels.com/photos/2558605/pexels-photo-2558605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+        <caption>Kitten with blue eyes being painted like one of my french girls</caption>
       </div>
       <div>
-        <img class="imageFilter capibara" src="https://images.pexels.com/photos/5479610/pexels-photo-5479610.jpeg" />
+        <img class="imageFilter capybara" src="https://images.pexels.com/photos/5479610/pexels-photo-5479610.jpeg" />
+        <caption>Capybara in water looking menacingly into the distance</caption>
       </div>
       <div>
         <img class="imageFilter elephant" src="https://images.pexels.com/photos/5125390/pexels-photo-5125390.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+        <caption>Silhouette of an elephant against the orange sunset backdrop</caption>
       </div>
       <div>
         <img class="imageFilter cat" src="https://images.pexels.com/photos/1787414/pexels-photo-1787414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+        <caption>Cats having a nap on one another</caption>
       </div>
       <div>
-        <img class="imageFilter capibara" src="https://images.pexels.com/photos/4315288/pexels-photo-4315288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+        <img class="imageFilter capybara" src="https://images.pexels.com/photos/4315288/pexels-photo-4315288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+        <caption>Capybara eating grass whilst one gives me the stink eye</caption>
       </div>
       <div>
         <img class="imageFilter panda" src="https://images.pexels.com/photos/1661535/pexels-photo-1661535.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+        <caption>Panda parent tending to a panda cub</caption>
       </div>
       <div>
         <img class="imageFilter elephant" src="https://images.pexels.com/photos/4577141/pexels-photo-4577141.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+        <caption>Lone elephant looks on as cameraman approaches</caption>
       </div>
       <div>
-        <img class="imageFilter capibara" src="https://images.pexels.com/photos/5919712/pexels-photo-5919712.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+        <img class="imageFilter capybara" src="https://images.pexels.com/photos/5919712/pexels-photo-5919712.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+        <caption>Capybara parent watches over child as it eats</caption>
       </div>
       <div>
         <img class="imageFilter panda" src="https://images.pexels.com/photos/4444037/pexels-photo-4444037.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+        <caption>Panda absolutely loving his bamboo</caption>
       </div>
       <div>
-        <img class="imageFilter capibara" src="https://images.pexels.com/photos/5479616/pexels-photo-5479616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+        <img class="imageFilter capybara" src="https://images.pexels.com/photos/5479616/pexels-photo-5479616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+        <caption>Lone capybara sitting in water</caption>
       </div>
       <div>
         <img class="imageFilter cat" src="https://images.pexels.com/photos/236606/pexels-photo-236606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+        <caption>Cat sleeping on ownsers bed</caption>
       </div>
       <div>
         <img class="imageFilter panda" src="https://images.pexels.com/photos/7506265/pexels-photo-7506265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+        <caption>Panda eating branches off a tree</caption>
       </div>
       <div>
         <img class="imageFilter elephant" src="https://images.pexels.com/photos/1054655/pexels-photo-1054655.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+        <caption>Elephant standing proudly near watering hole</caption>
       </div>
       <div>
         <img class="imageFilter cat" src="https://images.pexels.com/photos/2870353/pexels-photo-2870353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+        <caption>This cat definitely wants to murder me</caption>
       </div>
       <div>
         <img class="imageFilter panda" src="https://images.pexels.com/photos/6967905/pexels-photo-6967905.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+        <caption>Panda debating rolling over</caption>
       </div>
     </section>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu volutpat velit. Vestibulum eget molestie neque. Donec quam arcu, feugiat eu tellus non, fermentum vestibulum quam. Nulla et accumsan erat. Nullam tincidunt, nulla convallis ullamcorper consequat, erat tortor tincidunt leo, ac rutrum felis mi eget diam. Duis suscipit varius volutpat. Sed pharetra vel nisl eget euismod. Aenean laoreet tincidunt sapien, quis sodales dui sodales nec. Pellentesque lobortis et risus in pharetra. Donec venenatis quam dignissim sapien pellentesque, vitae lacinia ipsum ultrices.</p>

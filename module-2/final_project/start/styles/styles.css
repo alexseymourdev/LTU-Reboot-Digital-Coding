@@ -59,3 +59,7 @@ aside{
 .hide{
     display:none;
 }
+
+.clicked{
+    border:1px solid red;
+}
